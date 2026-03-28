@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Acubi Studios</title>
+  <meta
+    name="description"
+    content="Learn about Acubi Studios, a handmade crochet brand crafting custom dolls and keepsake art."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Acubi Studios home">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">
+          <strong>Acubi Studios</strong>
+          <small>crochet with a pulse</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link is-active" href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-drawer">
+          Cart
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="about-hero panel">
+        <div class="about-intro">
+          <p class="eyebrow">About the brand</p>
+          <h1>Acubi Studios makes crochet pieces that behave like memories.</h1>
+          <p>
+            The studio creates plush portraits, doll duos, charms, and tactile little artifacts
+            that feel both intimate and collectible.
+          </p>
+        </div>
+        <div class="about-portrait" aria-hidden="true">
+          <div class="portrait-cutout"></div>
+          <div class="portrait-doodle portrait-doodle-one"></div>
+          <div class="portrait-doodle portrait-doodle-two"></div>
+        </div>
+      </section>
+
+      <section class="about-layout">
+        <article class="panel">
+          <p class="eyebrow">What makes it special</p>
+          <h2>Handmade, expressive, and never too polished.</h2>
+          <p>
+            The references you shared lean into playful typography, doodle overlays, sticker-like
+            symbols, and real emotional texture. This site translates that into a cleaner commerce
+            flow with softer spacing, card depth, and restrained motion.
+          </p>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">How Acubi works</p>
+          <div class="steps">
+            <div>
+              <strong>1. Share a reference</strong>
+              <p>Send a photo, a mood, an outfit, or even a memory you want translated into yarn.</p>
+            </div>
+            <div>
+              <strong>2. The studio sketches the vibe</strong>
+              <p>Materials, color palette, and a tiny design direction get mapped before making.</p>
+            </div>
+            <div>
+              <strong>3. You receive a small handmade world</strong>
+              <p>Each object arrives as a giftable keepsake with warmth, humor, and character.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel values-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Studio values</p>
+          <h2>Softness, personality, and story-driven craft.</h2>
+        </div>
+        <div class="value-grid">
+          <div>
+            <h3>Custom-first</h3>
+            <p>Acubi shines when the piece is tied to a real person, relationship, or memory.</p>
+          </div>
+          <div>
+            <h3>Playful visuals</h3>
+            <p>Doodles, odd little stars, and oversized type keep the brand feeling alive.</p>
+          </div>
+          <div>
+            <h3>Premium clarity</h3>
+            <p>Layouts stay spacious and direct so the handmade products remain the focus.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2>Picked for later</h2>
+        </div>
+        <button class="cart-close" type="button" aria-label="Close cart">Close</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong data-cart-total>Rs 0</strong>
+        </div>
+        <button class="button button-primary cart-checkout" type="button">Checkout later</button>
+      </div>
+    </aside>
+    <div class="cart-backdrop" hidden></div>
+
+    <footer class="site-footer panel">
+      <div>
+        <strong>Acubi Studios</strong>
+      </div>
+      <div class="socials" aria-label="Social media links">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2zm10.35 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"/></svg>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.01 2C6.76 2 3 5.76 3 10.72c0 3.18 1.79 5.95 4.67 7.03.03-.55.01-1.22.15-1.82.16-.65 1.06-4.48 1.06-4.48s-.26-.52-.26-1.28c0-1.2.69-2.1 1.56-2.1.73 0 1.09.55 1.09 1.21 0 .74-.47 1.85-.72 2.88-.21.87.44 1.57 1.31 1.57 1.57 0 2.63-2.02 2.63-4.42 0-1.82-1.22-3.18-3.45-3.18-2.51 0-4.07 1.87-4.07 3.99 0 .73.22 1.26.56 1.66.16.19.18.26.12.47l-.18.73c-.06.23-.25.31-.46.22-1.27-.52-1.86-1.92-1.86-3.5 0-2.61 2.19-5.74 6.55-5.74 3.5 0 5.81 2.53 5.81 5.25 0 3.59-2 6.26-4.95 6.26-.99 0-1.92-.53-2.24-1.12l-.61 2.38c-.22.84-.65 1.88-.96 2.52.72.22 1.48.33 2.26.33 5.24 0 9-3.76 9-8.72C21 5.76 17.24 2 12.01 2z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.56 2H19a5.52 5.52 0 0 0 3 4.68v2.48a7.87 7.87 0 0 1-3.07-.63v7.15a6.52 6.52 0 1 1-6.52-6.52c.25 0 .5.01.74.04v2.56a3.92 3.92 0 1 0 3.41 3.88z"/></svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

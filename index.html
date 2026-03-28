@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acubi Studios | Crochet With Character</title>
+  <meta
+    name="description"
+    content="Acubi Studios makes crochet art with playful storytelling, custom gifts, and collectible plush pieces."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Acubi Studios home">
+        <span class="brand-mark">A</span>
+        <span class="brand-text">
+          <strong>Acubi Studios</strong>
+          <small>crochet with a pulse</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="nav">
+        <a class="nav-link is-active" href="index.html">Home</a>
+        <a class="nav-link" href="shop.html">Shop</a>
+        <a class="nav-link" href="about.html">About</a>
+      </nav>
+      <div class="header-actions">
+        <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-drawer">
+          Cart
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Handmade keepsakes. Editorial energy.</p>
+          <h1>
+            Soft, expressive
+            <span class="headline-pop">crochet art</span>
+            for the sentimental collector.
+          </h1>
+          <p class="hero-text">
+            Acubi Studios turns memories, inside jokes, and tiny obsessions into crochet pieces
+            that feel playful, premium, and unmistakably personal.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="shop.html">Browse the shop</a>
+            <a class="button button-secondary" href="about.html">Meet the studio</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-card art-photo">
+            <div class="photo-overlay">
+              <span class="scribble-star"></span>
+              <p>I turned a moment into a pocket plushie.</p>
+            </div>
+          </div>
+          <div class="art-card art-note">
+            <span class="doodle-badge">new drop</span>
+            <h2>Things we make this week</h2>
+            <ul>
+              <li>custom couple dolls</li>
+              <li>bag charms with tiny faces</li>
+              <li>flower buttons and mini mascots</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-grid">
+        <article class="panel feature feature-wide">
+          <p class="eyebrow">Design language</p>
+          <h2>Scrapbook warmth meets polished product design.</h2>
+          <p>
+            The visuals borrow from handmade doodles, chunky type, sticker-like shapes, and a
+            quieter Apple-style rhythm: strong spacing, soft glass surfaces, and product-first
+            focus.
+          </p>
+        </article>
+
+        <article class="panel feature">
+          <div class="price-pill">Rs 600 - Rs 1,500</div>
+          <h3>Built for gifting</h3>
+          <p>Anniversary dolls, graduation mascots, and one-off crochet portraits made to order.</p>
+        </article>
+
+        <article class="panel feature">
+          <div class="quote-bubble">even when the reels flop, the work still shines</div>
+          <h3>Small-batch charm</h3>
+          <p>Every piece feels a little odd, a little tender, and fully handmade by the studio.</p>
+        </article>
+      </section>
+
+      <section class="catalog-preview">
+        <div class="section-heading">
+          <p class="eyebrow">Shop preview</p>
+          <h2>Collectible crochet with character.</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card panel is-clickable" data-product-id="custom-couple-dolls" tabindex="0" role="link" aria-label="View details for Custom Couple Dolls">
+            <div class="product-visual product-one"></div>
+            <div class="product-copy">
+              <span class="product-tag">best seller</span>
+              <h3>Custom Couple Dolls</h3>
+              <p>Mini portrait dolls styled from your outfits, wedding looks, or favorite photo.</p>
+              <div class="product-meta">
+                <strong>From Rs 1,400</strong>
+                <span>made-to-order</span>
+              </div>
+              <div class="product-actions">
+                <a class="button button-secondary" href="product.html?id=custom-couple-dolls">View details</a>
+                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="custom-couple-dolls">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card panel is-clickable" data-product-id="button-bloom-charm" tabindex="0" role="link" aria-label="View details for Button Bloom Charm">
+            <div class="product-visual product-two"></div>
+            <div class="product-copy">
+              <span class="product-tag">tiny gift</span>
+              <h3>Button Bloom Charm</h3>
+              <p>Soft pink flower charm for bags, keychains, and desk setups that need some whimsy.</p>
+              <div class="product-meta">
+                <strong>Rs 650</strong>
+                <span>ready to ship</span>
+              </div>
+              <div class="product-actions">
+                <a class="button button-secondary" href="product.html?id=button-bloom-charm">View details</a>
+                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="button-bloom-charm">Add to cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card panel is-clickable" data-product-id="memory-plush-portrait" tabindex="0" role="link" aria-label="View details for Memory Plush Portrait">
+            <div class="product-visual product-three"></div>
+            <div class="product-copy">
+              <span class="product-tag">statement piece</span>
+              <h3>Memory Plush Portrait</h3>
+              <p>Handheld plush sculpture inspired by a person, pet, or fictional comfort character.</p>
+              <div class="product-meta">
+                <strong>From Rs 950</strong>
+                <span>customizable</span>
+              </div>
+              <div class="product-actions">
+                <a class="button button-secondary" href="product.html?id=memory-plush-portrait">View details</a>
+                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="memory-plush-portrait">Add to cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel about-teaser">
+        <div>
+          <p class="eyebrow">About Acubi</p>
+          <h2>Made to feel like a keepsake you found in a dream journal.</h2>
+        </div>
+        <p>
+          Acubi Studios is a handmade crochet brand centered on character, memory, and delight.
+          The pieces feel intimate and tactile, but the presentation stays crisp and modern.
+        </p>
+        <a class="button button-secondary" href="about.html">Read the story</a>
+      </section>
+    </main>
+
+    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2>Picked for later</h2>
+        </div>
+        <button class="cart-close" type="button" aria-label="Close cart">Close</button>
+      </div>
+      <div class="cart-items" data-cart-items></div>
+      <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
+      <div class="cart-summary">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong data-cart-total>Rs 0</strong>
+        </div>
+        <button class="button button-primary cart-checkout" type="button">Checkout later</button>
+      </div>
+    </aside>
+    <div class="cart-backdrop" hidden></div>
+
+    <footer class="site-footer panel">
+      <div>
+        <strong>Acubi Studios</strong>
+      </div>
+      <div class="socials" aria-label="Social media links">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2zm10.35 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"/></svg>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.01 2C6.76 2 3 5.76 3 10.72c0 3.18 1.79 5.95 4.67 7.03.03-.55.01-1.22.15-1.82.16-.65 1.06-4.48 1.06-4.48s-.26-.52-.26-1.28c0-1.2.69-2.1 1.56-2.1.73 0 1.09.55 1.09 1.21 0 .74-.47 1.85-.72 2.88-.21.87.44 1.57 1.31 1.57 1.57 0 2.63-2.02 2.63-4.42 0-1.82-1.22-3.18-3.45-3.18-2.51 0-4.07 1.87-4.07 3.99 0 .73.22 1.26.56 1.66.16.19.18.26.12.47l-.18.73c-.06.23-.25.31-.46.22-1.27-.52-1.86-1.92-1.86-3.5 0-2.61 2.19-5.74 6.55-5.74 3.5 0 5.81 2.53 5.81 5.25 0 3.59-2 6.26-4.95 6.26-.99 0-1.92-.53-2.24-1.12l-.61 2.38c-.22.84-.65 1.88-.96 2.52.72.22 1.48.33 2.26.33 5.24 0 9-3.76 9-8.72C21 5.76 17.24 2 12.01 2z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.56 2H19a5.52 5.52 0 0 0 3 4.68v2.48a7.87 7.87 0 0 1-3.07-.63v7.15a6.52 6.52 0 1 1-6.52-6.52c.25 0 .5.01.74.04v2.56a3.92 3.92 0 1 0 3.41 3.88z"/></svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
