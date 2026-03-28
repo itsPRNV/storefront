@@ -1,132 +1,132 @@
-window.ACUBI_PRODUCTS = [
+window.STORE_PRODUCTS = [
   {
-    id: "custom-couple-dolls",
-    name: "Custom Couple Dolls",
+    id: "product-one",
+    name: "Product One",
     price: 1400,
     newestRank: 3,
     bestSellingRank: 1,
     priceLabel: "From Rs 1,400",
-    status: "made-to-order",
-    tag: "best seller",
+    status: "available",
+    tag: "featured",
     visualClass: "product-one",
-    shortDescription: "Mini portrait dolls styled from your outfits, wedding looks, or favorite photo.",
+    shortDescription: "A simple featured item with clean details and a custom option.",
     description:
-      "A custom crochet duo made from your reference photos. Ideal for weddings, anniversaries, or just immortalizing a favorite outfit pairing in yarn.",
-    category: "Custom dolls",
+      "A simple product designed to keep the catalog clear and easy to browse.",
+    category: "Featured",
     leadTime: "2-3 weeks",
     includes: [
-      "Two hand-crocheted dolls",
-      "Outfit color matching",
-      "Small accessory details like flowers, veils, or bags"
+      "Main item",
+      "Standard finish",
+      "Basic packaging"
     ]
   },
   {
-    id: "button-bloom-charm",
-    name: "Button Bloom Charm",
+    id: "product-two",
+    name: "Product Two",
     price: 650,
     newestRank: 5,
     bestSellingRank: 2,
     priceLabel: "Rs 650",
-    status: "ready to ship",
-    tag: "tiny gift",
+    status: "available",
+    tag: "standard",
     visualClass: "product-two",
-    shortDescription: "Soft pink flower charm for bags, keychains, and desk setups that need some whimsy.",
+    shortDescription: "A compact item with a straightforward design and simple presentation.",
     description:
-      "A pastel flower-button charm with a soft sculptural feel. Designed as a small joyful object for bags, mirrors, keys, and gift wrapping.",
-    category: "Charms",
+      "A general product option that keeps the storefront flexible and easy to understand.",
+    category: "Standard",
     leadTime: "Ships in 3-5 days",
     includes: [
-      "Crochet flower charm",
-      "Loop for hanging or clipping",
-      "Gift-ready wrapping"
+      "Single item",
+      "Standard details",
+      "Basic packaging"
     ]
   },
   {
-    id: "memory-plush-portrait",
-    name: "Memory Plush Portrait",
+    id: "product-three",
+    name: "Product Three",
     price: 950,
     newestRank: 4,
     bestSellingRank: 3,
     priceLabel: "From Rs 950",
-    status: "customizable",
-    tag: "statement piece",
+    status: "available",
+    tag: "popular",
     visualClass: "product-three",
-    shortDescription: "Handheld plush sculpture inspired by a person, pet, or fictional comfort character.",
+    shortDescription: "A flexible product choice with a clear layout and neutral wording.",
     description:
-      "A soft portrait plush that translates a face, mood, or icon into a palm-sized crochet keepsake with expressive features and color details.",
-    category: "Custom dolls",
+      "A general listing built to show product information without brand-specific language.",
+    category: "Featured",
     leadTime: "1-2 weeks",
     includes: [
-      "One portrait plush",
-      "Custom color palette",
-      "Face and clothing detail work"
+      "Primary item",
+      "Optional variation",
+      "Basic packaging"
     ]
   },
   {
-    id: "mini-mood-mascot",
-    name: "Mini Mood Mascot",
+    id: "product-four",
+    name: "Product Four",
     price: 720,
     newestRank: 2,
     bestSellingRank: 4,
     priceLabel: "Rs 720",
-    status: "small batch",
-    tag: "giftable",
+    status: "available",
+    tag: "new",
     visualClass: "product-four",
-    shortDescription: "A tiny desk plush with sleepy eyes, blush cheeks, and one embroidered lucky star.",
+    shortDescription: "A simple item for everyday browsing with easy-to-scan details.",
     description:
-      "A compact mascot plush for desks, shelves, and care packages. Lightly surreal, soft to hold, and designed to feel like a tiny mood object.",
-    category: "Decor",
+      "A straightforward product entry focused on clarity, basic copy, and easy comparison.",
+    category: "Everyday",
     leadTime: "Ships in 5-7 days",
     includes: [
-      "One mascot plush",
-      "Embroidered detail accents",
-      "Acubi tag"
+      "Single item",
+      "Standard finish",
+      "Basic packaging"
     ]
   },
   {
-    id: "crochet-name-totem",
-    name: "Crochet Name Totem",
+    id: "product-five",
+    name: "Product Five",
     price: 800,
     newestRank: 6,
     bestSellingRank: 5,
     priceLabel: "From Rs 800",
-    status: "personalized",
-    tag: "signature",
+    status: "available",
+    tag: "classic",
     visualClass: "product-five",
-    shortDescription: "Soft sculptural letters with bows, flowers, or tiny icons woven into the form.",
+    shortDescription: "A balanced product option with a clean structure and simple description.",
     description:
-      "A personalized crochet word or name piece for gifting, room styling, or memory shelves. Decorative but still soft and tactile.",
-    category: "Decor",
+      "A general-purpose listing that keeps the catalog neutral and presentation-focused.",
+    category: "Everyday",
     leadTime: "1-2 weeks",
     includes: [
-      "Custom name or short word",
-      "Choice of accent motif",
-      "Color customization"
+      "Primary item",
+      "Optional selection",
+      "Basic packaging"
     ]
   },
   {
-    id: "lucky-wall-charm",
-    name: "Lucky Wall Charm",
+    id: "product-six",
+    name: "Product Six",
     price: 1050,
     newestRank: 1,
     bestSellingRank: 6,
     priceLabel: "Rs 1,050",
-    status: "launching soon",
-    tag: "home object",
+    status: "coming soon",
+    tag: "new",
     visualClass: "product-six",
-    shortDescription: "Decor piece mixing stitched motifs, texture, and doodle-like geometry for cozy corners.",
+    shortDescription: "A clean product listing prepared for a future release.",
     description:
-      "A wall-facing crochet object for bedrooms, work corners, and reading nooks. Built like a small textile collage with a soft Acubi visual language.",
-    category: "Decor",
+      "A simple upcoming product entry using neutral language and a basic structure.",
+    category: "Everyday",
     leadTime: "Pre-order",
     includes: [
-      "Structured crochet wall charm",
-      "Hanging loop",
-      "Decorative stitched details"
+      "Primary item",
+      "Standard details",
+      "Basic packaging"
     ]
   }
 ];
 
-window.getAcubiProductById = function getAcubiProductById(productId) {
-  return window.ACUBI_PRODUCTS.find((product) => product.id === productId);
+window.getStoreProductById = function getStoreProductById(productId) {
+  return window.STORE_PRODUCTS.find((product) => product.id === productId);
 };

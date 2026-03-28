@@ -1,4 +1,4 @@
-const CART_STORAGE_KEY = "acubi-cart";
+const CART_STORAGE_KEY = "store-cart";
 
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
@@ -12,12 +12,12 @@ const cartTotal = document.querySelector("[data-cart-total]");
 const cartCountNodes = document.querySelectorAll("[data-cart-count]");
 
 function getProducts() {
-  return window.ACUBI_PRODUCTS || [];
+  return window.STORE_PRODUCTS || [];
 }
 
 function getProductById(productId) {
-  return typeof window.getAcubiProductById === "function"
-    ? window.getAcubiProductById(productId)
+  return typeof window.getStoreProductById === "function"
+    ? window.getStoreProductById(productId)
     : null;
 }
 
@@ -360,7 +360,7 @@ function renderProductPage() {
     return;
   }
 
-  document.title = `${product.name} | Acubi Studios`;
+  document.title = `${product.name} | Example Studios`;
 
   const visual = document.querySelector("[data-product-visual]");
   const name = document.querySelector("[data-product-name]");

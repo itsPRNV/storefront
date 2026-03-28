@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | Acubi Studios</title>
+  <title>Shop | Example Studios</title>
   <meta
     name="description"
-    content="Browse Acubi Studios crochet art, custom dolls, charms, and handmade plush keepsakes."
+    content="Browse Example Studios products in a simple store layout with clear categories."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,11 @@
 <body>
   <div class="site-shell">
     <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Acubi Studios home">
-        <span class="brand-mark">A</span>
+      <a class="brand" href="index.html" aria-label="Example Studios home">
+        <span class="brand-mark">E</span>
         <span class="brand-text">
-          <strong>Acubi Studios</strong>
-          <small>crochet with a pulse</small>
+          <strong>Example Studios</strong>
+          <small>simple product store</small>
         </span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -45,19 +45,18 @@
     <main>
       <section class="shop-hero panel">
         <div>
-          <p class="eyebrow">Shop Acubi Studios</p>
-          <h1>Objects that feel handmade, heartfelt, and slightly surreal.</h1>
+          <p class="eyebrow">Shop Example Studios</p>
+          <h1>Simple products in a clear store layout.</h1>
           <p>
-            A compact catalog for custom gifts, collectible dolls, and crochet experiments with a
-            scrapbook soul.
+            A basic catalog with neutral product names, simple categories, and easy filtering.
           </p>
         </div>
         <div class="shop-controls">
           <div class="filter-row" aria-label="Product categories">
             <button class="filter-chip is-selected" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-chip" type="button" data-filter="custom-dolls" aria-pressed="false">Custom dolls</button>
-            <button class="filter-chip" type="button" data-filter="charms" aria-pressed="false">Charms</button>
-            <button class="filter-chip" type="button" data-filter="decor" aria-pressed="false">Decor</button>
+            <button class="filter-chip" type="button" data-filter="featured" aria-pressed="false">Featured</button>
+            <button class="filter-chip" type="button" data-filter="standard" aria-pressed="false">Standard</button>
+            <button class="filter-chip" type="button" data-filter="everyday" aria-pressed="false">Everyday</button>
           </div>
           <div class="sort-row">
             <label class="sort-label" for="shop-sort">Sort by</label>
@@ -76,104 +75,104 @@
       </section>
 
       <section class="shop-grid">
-        <article class="product-card panel is-clickable" data-product-id="custom-couple-dolls" data-category="custom-dolls" tabindex="0" role="link" aria-label="View details for Custom Couple Dolls">
+        <article class="product-card panel is-clickable" data-product-id="product-one" data-category="featured" tabindex="0" role="link" aria-label="View details for Product One">
           <div class="product-visual product-one"></div>
           <div class="product-copy">
-            <span class="product-tag">custom order</span>
-            <h2>Custom Couple Dolls</h2>
-            <p>Based on your photos, styled with outfits, bouquets, veils, uniforms, or tiny props.</p>
+            <span class="product-tag">featured</span>
+            <h2>Product One</h2>
+            <p>A simple featured item with clean details and a custom option.</p>
             <div class="product-meta">
               <strong>From Rs 1,400</strong>
-              <span>2-3 weeks</span>
+              <span>available</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=custom-couple-dolls">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="custom-couple-dolls">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-one">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-one">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <article class="product-card panel is-clickable" data-product-id="button-bloom-charm" data-category="charms" tabindex="0" role="link" aria-label="View details for Button Bloom Charm">
+        <article class="product-card panel is-clickable" data-product-id="product-two" data-category="standard" tabindex="0" role="link" aria-label="View details for Product Two">
           <div class="product-visual product-two"></div>
           <div class="product-copy">
-            <span class="product-tag">ready to ship</span>
-            <h2>Button Bloom Charm</h2>
-            <p>Flower-button charm with pastel colorways designed for bags, mirrors, and desks.</p>
+            <span class="product-tag">standard</span>
+            <h2>Product Two</h2>
+            <p>A compact item with a straightforward design and simple presentation.</p>
             <div class="product-meta">
               <strong>Rs 650</strong>
-              <span>limited drop</span>
+              <span>available</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=button-bloom-charm">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="button-bloom-charm">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-two">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-two">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <article class="product-card panel is-clickable" data-product-id="memory-plush-portrait" data-category="custom-dolls" tabindex="0" role="link" aria-label="View details for Memory Plush Portrait">
+        <article class="product-card panel is-clickable" data-product-id="product-three" data-category="featured" tabindex="0" role="link" aria-label="View details for Product Three">
           <div class="product-visual product-three"></div>
           <div class="product-copy">
-            <span class="product-tag">made to order</span>
-            <h2>Memory Plush Portrait</h2>
-            <p>Portrait-style plush inspired by a favorite person, pet, or pop-culture character.</p>
+            <span class="product-tag">popular</span>
+            <h2>Product Three</h2>
+            <p>A flexible product choice with a clear layout and neutral wording.</p>
             <div class="product-meta">
               <strong>From Rs 950</strong>
-              <span>custom colors</span>
+              <span>available</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=memory-plush-portrait">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="memory-plush-portrait">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-three">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-three">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <article class="product-card panel is-clickable" data-product-id="mini-mood-mascot" data-category="decor" tabindex="0" role="link" aria-label="View details for Mini Mood Mascot">
+        <article class="product-card panel is-clickable" data-product-id="product-four" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Four">
           <div class="product-visual product-four"></div>
           <div class="product-copy">
-            <span class="product-tag">giftable</span>
-            <h2>Mini Mood Mascot</h2>
-            <p>A tiny desk plush with sleepy eyes, blush cheeks, and one embroidered lucky star.</p>
+            <span class="product-tag">new</span>
+            <h2>Product Four</h2>
+            <p>A simple item for everyday browsing with easy-to-scan details.</p>
             <div class="product-meta">
               <strong>Rs 720</strong>
-              <span>small batch</span>
+              <span>available</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=mini-mood-mascot">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="mini-mood-mascot">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-four">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-four">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <article class="product-card panel is-clickable" data-product-id="crochet-name-totem" data-category="decor" tabindex="0" role="link" aria-label="View details for Crochet Name Totem">
+        <article class="product-card panel is-clickable" data-product-id="product-five" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Five">
           <div class="product-visual product-five"></div>
           <div class="product-copy">
-            <span class="product-tag">signature</span>
-            <h2>Crochet Name Totem</h2>
-            <p>Soft sculptural letters with bows, flowers, or tiny icons woven into the form.</p>
+            <span class="product-tag">classic</span>
+            <h2>Product Five</h2>
+            <p>A balanced product option with a clean structure and simple description.</p>
             <div class="product-meta">
               <strong>From Rs 800</strong>
-              <span>personalized</span>
+              <span>available</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=crochet-name-totem">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="crochet-name-totem">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-five">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-five">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <article class="product-card panel is-clickable" data-product-id="lucky-wall-charm" data-category="decor" tabindex="0" role="link" aria-label="View details for Lucky Wall Charm">
+        <article class="product-card panel is-clickable" data-product-id="product-six" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Six">
           <div class="product-visual product-six"></div>
           <div class="product-copy">
-            <span class="product-tag">home object</span>
-            <h2>Lucky Wall Charm</h2>
-            <p>Decor piece mixing stitched motifs, texture, and doodle-like geometry for cozy corners.</p>
+            <span class="product-tag">new</span>
+            <h2>Product Six</h2>
+            <p>A clean product listing prepared for a future release.</p>
             <div class="product-meta">
               <strong>Rs 1,050</strong>
-              <span>launching soon</span>
+              <span>coming soon</span>
             </div>
             <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=lucky-wall-charm">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="lucky-wall-charm">Add to cart</button>
+              <a class="button button-secondary" href="product.html?id=product-six">View details</a>
+              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-six">Add to cart</button>
             </div>
           </div>
         </article>
@@ -203,7 +202,7 @@
 
     <footer class="site-footer panel">
       <div>
-        <strong>Acubi Studios</strong>
+        <strong>Example Studios</strong>
       </div>
       <div class="socials" aria-label="Social media links">
         <a href="#" aria-label="Instagram">
