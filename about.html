@@ -1,154 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Example Studios</title>
-  <meta
-    name="description"
-    content="Learn about Example Studios, a simple store with clear product pages and neutral copy."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="styles.css">
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#faf9f7",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container-high": "#e9e8e6",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "surface-container": "#efeeec",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "outline": "#7e7576",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e3e2e0",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary-container": "#626361",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "on-surface-variant": "#4c4546",
+                        "surface": "#faf9f7",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-surface": "#2f3130",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#f2f0ee",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary": "#000000",
+                        "surface-container-low": "#f5f3f1",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5e5e5d",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1b",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9f7",
+                        "surface-dim": "#dbdad8",
+                        "on-background": "#1b1c1b",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-container": "#e0dfdd",
+                        "on-tertiary-container": "#85847f",
+                        "on-secondary-fixed-variant": "#464746",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#1c1c18",
+                        "surface-variant": "#e3e2e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f7;
+            color: #1b1c1b;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+    </style>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Example Studios home">
-        <span class="brand-mark">E</span>
-        <span class="brand-text">
-          <strong>Example Studios</strong>
-          <small>simple product store</small>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="shop.html">Shop</a>
-        <a class="nav-link is-active" href="about.html">About</a>
-      </nav>
-      <div class="header-actions">
-        <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-drawer">
-          Cart
-          <span class="cart-count" data-cart-count>0</span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <section class="about-hero panel">
-        <div class="about-intro">
-          <p class="eyebrow">About the store</p>
-          <h1>Example Studios keeps the storefront simple and easy to present.</h1>
-          <p>
-            The store uses basic product labels, neutral descriptions, and a clean layout that can
-            fit a wide range of items.
-          </p>
-        </div>
-        <div class="about-portrait" aria-hidden="true">
-          <div class="portrait-cutout"></div>
-          <div class="portrait-doodle portrait-doodle-one"></div>
-          <div class="portrait-doodle portrait-doodle-two"></div>
-        </div>
-      </section>
-
-      <section class="about-layout">
-        <article class="panel">
-          <p class="eyebrow">What changed</p>
-          <h2>Basic wording, simple structure, and less brand-specific content.</h2>
-          <p>
-            The content now avoids niche product language and keeps the focus on straightforward
-            shopping information.
-          </p>
-        </article>
-
-        <article class="panel">
-          <p class="eyebrow">How it works</p>
-          <div class="steps">
-            <div>
-              <strong>1. Browse the catalog</strong>
-              <p>Open the product list and review the available items.</p>
-            </div>
-            <div>
-              <strong>2. Check the details</strong>
-              <p>Each product page shows the main description, price, and status.</p>
-            </div>
-            <div>
-              <strong>3. Add items to the cart</strong>
-              <p>The cart flow stays simple and works the same across the site.</p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="panel values-panel">
-        <div class="section-heading">
-          <p class="eyebrow">Store values</p>
-          <h2>Clarity, simplicity, and flexible presentation.</h2>
-        </div>
-        <div class="value-grid">
-          <div>
-            <h3>Neutral copy</h3>
-            <p>Descriptions stay general so the site is easy to reuse and present.</p>
-          </div>
-          <div>
-            <h3>Basic labels</h3>
-            <p>Product names and categories are simple and easy to scan.</p>
-          </div>
-          <div>
-            <h3>Clear structure</h3>
-            <p>Layouts stay focused on the information shoppers need most.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
-      <div class="cart-drawer-header">
-        <div>
-          <p class="eyebrow">Your cart</p>
-          <h2>Picked for later</h2>
-        </div>
-        <button class="cart-close" type="button" aria-label="Close cart">Close</button>
-      </div>
-      <div class="cart-items" data-cart-items></div>
-      <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
-      <div class="cart-summary">
-        <div class="cart-total">
-          <span>Total</span>
-          <strong data-cart-total>Rs 0</strong>
-        </div>
-        <button class="button button-primary cart-checkout" type="button">Checkout later</button>
-      </div>
-    </aside>
-    <div class="cart-backdrop" hidden></div>
-
-    <footer class="site-footer panel">
-      <div>
-        <strong>Example Studios</strong>
-      </div>
-      <div class="socials" aria-label="Social media links">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2zm10.35 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"/></svg>
-        </a>
-        <a href="#" aria-label="Pinterest">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.01 2C6.76 2 3 5.76 3 10.72c0 3.18 1.79 5.95 4.67 7.03.03-.55.01-1.22.15-1.82.16-.65 1.06-4.48 1.06-4.48s-.26-.52-.26-1.28c0-1.2.69-2.1 1.56-2.1.73 0 1.09.55 1.09 1.21 0 .74-.47 1.85-.72 2.88-.21.87.44 1.57 1.31 1.57 1.57 0 2.63-2.02 2.63-4.42 0-1.82-1.22-3.18-3.45-3.18-2.51 0-4.07 1.87-4.07 3.99 0 .73.22 1.26.56 1.66.16.19.18.26.12.47l-.18.73c-.06.23-.25.31-.46.22-1.27-.52-1.86-1.92-1.86-3.5 0-2.61 2.19-5.74 6.55-5.74 3.5 0 5.81 2.53 5.81 5.25 0 3.59-2 6.26-4.95 6.26-.99 0-1.92-.53-2.24-1.12l-.61 2.38c-.22.84-.65 1.88-.96 2.52.72.22 1.48.33 2.26.33 5.24 0 9-3.76 9-8.72C21 5.76 17.24 2 12.01 2z"/></svg>
-        </a>
-        <a href="#" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.56 2H19a5.52 5.52 0 0 0 3 4.68v2.48a7.87 7.87 0 0 1-3.07-.63v7.15a6.52 6.52 0 1 1-6.52-6.52c.25 0 .5.01.74.04v2.56a3.92 3.92 0 1 0 3.41 3.88z"/></svg>
-        </a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<div class="fixed inset-0 grain-overlay z-[60]"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f7]/80 dark:bg-[#1b1b1b]/80 backdrop-blur-md flex justify-between items-center px-6 md:px-12 py-6 w-full">
+<a href="index.html" class="text-2xl font-bold tracking-tighter text-black dark:text-white uppercase font-headline">EXAMPLE STUDIOS</a>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-12 items-center">
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="shop.html">COLLECTIONS</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="about.html">EDITORIAL</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="index.html">ARCHIVE</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="index.html">STORES</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-xl cursor-pointer">shopping_bag</span>
+<span class="material-symbols-outlined text-xl md:hidden cursor-pointer">menu</span>
+</div>
+</nav>
+<main class="pt-24 md:pt-32">
+<!-- Hero Section: The Alpine Gallery -->
+<section class="relative h-[819px] md:h-[921px] w-full flex items-center justify-center overflow-hidden bg-surface-dim">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="high-end minimalist atelier with natural light hitting a large marble table and rolls of fine Italian textiles in the corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaCYapX4jKN_m1DOh1JJiEOTVWtL1y4GrAQ3uDo_-9bXyBSyawHV6INlQInncPrKm1EBpwRG6fLeKZB4cO-TvC68DvAsr6IwC4tdIz5M7_1ms-XbhGS03pAKhCB8w4uiriQSZXp7KxA6JPMCvwC_qyh_PG0IvEvBL5RrKRmuV2nNAY3znEd3SVtd9lEwix5CAr6uJZYuIa-MnW79SQliflw47mmT7TXoJdb4VwctZSJXCqd2_4sdfPRtEXobntGxHMIyQcFphRamE"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<p class="font-label text-[10px] md:text-xs tracking-[0.3em] uppercase mb-8 text-on-surface opacity-60">A Digital Monograph</p>
+<h1 class="text-5xl md:text-8xl font-headline tracking-tight leading-[0.95] text-primary">The Silent <br/><span class="italic">Curator</span></h1>
+</div>
+</section>
+<!-- Section 01: Manifesto -->
+<section class="px-6 md:px-24 py-24 md:py-48 grid grid-cols-1 md:grid-cols-12 gap-12 items-start bg-surface">
+<div class="md:col-span-4 flex flex-col gap-8">
+<div class="w-full aspect-[3/4] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="extreme close up of heavy-weight charcoal wool fabric showing the intricate texture and weave pattern under clinical lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoPc-IRdPOozj4I9hQdr2ziuQvAPBTZK2yBNqY45UiOXIu6e5_W1JZMI09pM0hvC1RJ_fXMZOlxyacGNIkp3zuyVxaenWOCgZIyEDRTQUPFsX1JFX-Jv87Ax_9v-g1EXnzl2_2S2pIcQd6kb0jBCK0KPPhoBbKtSu_MH49p6OgnHJRU5U3KFKPRxN4Mps7g8ReC8eDoYjBV5BL4lkT2jNFLTbuHQ3I3JAU8DSWBfHRpzLwc4kJ_DjDfC4E2LVM-JgQyDL_ya1YULI"/>
+</div>
+<p class="font-label text-[10px] tracking-[0.15em] uppercase text-outline">FIG. 01 — Materiality</p>
+</div>
+<div class="md:col-start-6 md:col-span-6 mt-12 md:mt-24">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-secondary block mb-6">Manifesto</span>
+<h2 class="text-3xl md:text-5xl font-headline leading-tight mb-8">Architecture of the wardrobe.</h2>
+<div class="max-w-lg space-y-6">
+<p class="text-lg md:text-xl font-light text-on-surface-variant leading-relaxed">Example Studios operates as a clinical laboratory of aesthetic precision. We believe that true luxury is not found in the roar of logos, but in the silence of perfect construction.</p>
+<p class="text-lg md:text-xl font-light text-on-surface-variant leading-relaxed">Our philosophy of "The Silent Curator" dictates that every garment, every object, and every space we inhabit must serve as a quiet anchor in an over-stimulated world.</p>
+</div>
+</div>
+</section>
+<!-- Section 02: Bento Monograph -->
+<section class="px-6 md:px-12 py-24 bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px] md:auto-rows-[400px]">
+<!-- Large Image -->
+<div class="md:col-span-2 md:row-span-2 bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="interior of a high-fashion retail space in St. Moritz with concrete walls, floor-to-ceiling windows, and minimalist clothing racks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPfci-56-VHMqGzvouF7I7hRkFsVCs5MCsPpD1XoO2nfx9tasC5Rmig9iBHZZ3cPqsjqBPxcdgUYldjIubFERvdiPIjsmaBW4EdfeRdvTJfCrpVI5gP6KHSbtuiwkXqI8xD12IhB6O9RUp-kRHDQFvXg_AnRtaF5WMt1exMDUXZx3BzFCXJp3mDT6Kk4lYtpdwmkzDZNF1qXYylrknSuESjhA34yjdybDViWJEtDLIIe9cqORG2uSXJSGgXhCy1UsTOfSqR_OyCCc"/>
+</div>
+<!-- Text Block -->
+<div class="md:col-span-2 bg-primary p-12 flex flex-col justify-end">
+<h3 class="text-on-primary text-3xl font-headline italic mb-4">"The quality of the space dictates the quality of the thought."</h3>
+<p class="font-label text-[10px] tracking-[0.2em] text-on-primary opacity-50 uppercase">— THE ATELIER PRINCIPLE</p>
+</div>
+<!-- Small Material 1 -->
+<div class="bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="macro shot of brushed surgical steel with soft reflections and clinical finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqD-lmLAgFQzR1V9DPXjKXGpV2tJz_eCvREw728MuSnKH7g7FafPtearKdfl06_QQ_2E8arSJZYdD-kHtpsJcWr0VrYR--iuxiOW7y3aQqv8dPHrQBzxFtrLhHnBC3vOORCUTazrmQv16MrrXbVXWWE9NBuFLRmBLigTemxSASLc0uvOsMvWYG6yNCIHe_btR2gJPOr63RaKyPK5fbF_et0-906riKyer8SU39jIO-aRueOO1TqVNYrWu-SPVjzqjmbT-FcoEZ77E"/>
+</div>
+<!-- Small Material 2 -->
+<div class="bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="texture of raw sandstone block with natural horizontal sediment lines and grainy surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEz8g95E_5W44TKiYAc8lonXelCEQDd9Paj6II3p7roxJSfYCJAn4VKoR4srMwzOCkDfjh7uefczsIzxJmWf6_i7GmF8riK8gZZhOQqjtEMyEPkBQuqG_xONnf_GAYwARFZ_blMMnvPMM-GVwBCrtIM2u-0cTBIoRNq_Y6Bc5oCSUI0Eae0SYHn19b-MmDhDcexFW28rAd-a_ZDLEeKWDwaWeMD1lUbtc245Pd_Wve4b6iaSUDwoVjQdBvtMkdagFX19yJa44FZTU"/>
+</div>
+</div>
+</section>
+<!-- Section 03: The Process -->
+<section class="px-6 md:px-24 py-24 md:py-48 flex flex-col md:flex-row gap-24 items-center bg-surface">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<div class="relative w-full aspect-square md:aspect-[4/5] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="close up of hands meticulously adjusting a collar on a white mannequin in a bright sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOA8OjDWXeI1QIQhGeijl4DhRG4A1moQo87R4iQqSvC-3T06neKgXn3Zu794_aS-3eK7V1AOuENRdSYHvn6YVVceSopn31NNovi4Esvy6fwd-CD0iOW0LyKZOQurx1QkE0faLjsNiubevpt7xOD13cnfiX8OriL8U9g1TgjLyAfN-n3DOr55p3mu1izQJsXN59V3k6BECZevwRD709E6NGYygEZJAuvHKv_r7FAoN0bZJ5xlneMFHo6uUGhnzfi0oCa-v_RYppwac"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-secondary block mb-6">The Process</span>
+<h2 class="text-4xl md:text-6xl font-headline mb-12">Precision as Discipline.</h2>
+<ul class="space-y-12">
+<li class="flex gap-8 items-start">
+<span class="font-headline text-2xl italic">01</span>
+<div>
+<h4 class="font-label text-sm font-bold uppercase tracking-widest mb-2">Observation</h4>
+<p class="text-on-surface-variant font-light leading-relaxed">Identifying the essential forms that define contemporary life. Stripping away the decorative to reveal the structural.</p>
+</div>
+</li>
+<li class="flex gap-8 items-start">
+<span class="font-headline text-2xl italic">02</span>
+<div>
+<h4 class="font-label text-sm font-bold uppercase tracking-widest mb-2">Refinement</h4>
+<p class="text-on-surface-variant font-light leading-relaxed">Weeks of iteration on a single seam. The pursuit of the perfect weight, the perfect drape, the perfect silence.</p>
+</div>
+</li>
+<li class="flex gap-8 items-start">
+<span class="font-headline text-2xl italic">03</span>
+<div>
+<h4 class="font-label text-sm font-bold uppercase tracking-widest mb-2">Curation</h4>
+<p class="text-on-surface-variant font-light leading-relaxed">Selecting only that which will endure. We do not design for a season; we design for a lifetime of service.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- Section 04: The Global Reach -->
+<section class="bg-surface-container-highest py-32 px-6">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-xl">
+<h2 class="text-5xl font-headline mb-6">The Physical Trace.</h2>
+<p class="text-on-surface-variant font-light text-lg">Our physical environments are extensions of our philosophy. Each store is a unique architectural response to its city.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest">Zurich</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Bahnhofstrasse 24</p>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest">Tokyo</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Aoyama 3-chome</p>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest">Milan</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Via Montenapoleone 18</p>
+</div>
+<div>
+<p class="font-label text-xs font-bold uppercase tracking-widest">New York</p>
+<p class="text-[10px] text-outline uppercase tracking-widest">Mercer Street 92</p>
+</div>
+</div>
+</div>
+<div class="mt-24 h-[500px] w-full">
+<img class="w-full h-full object-cover grayscale" data-alt="stylized architectural map showing the minimalist layout of a flagship store interior" data-location="Zurich" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWZb1HflZg9DdIusYXLjhMkXSLpXLQ9QOxedGZ9G46dOqkxV9GeAcEC_x6rwPd-RO9diDSAX_AM9rRMxCWB09vHrWJJc7mDJCA3LT8XqTdprIzJQqiRxyJGWLg3ezZBPNEFXOhIZTn6rlFm48mfYo1vd9wq5ITgbar-Gv1BtonVWZW8kC6nqumGRA9DI5juRMUEJU4p2-vQo4aE-7iyBrotdPN-Jl3ICMc9DwoyzjBEwl29E3pSOvsjzvIDjKRimMwAU8Ut5CAB50"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#faf9f7] dark:bg-[#1b1b1b] w-full py-16 px-12 border-t border-[#cfc4c5]/15">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline text-xl font-bold tracking-tighter uppercase">EXAMPLE STUDIOS</div>
+<p class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400">© 2024 EXAMPLE STUDIOS. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors" href="#">TERMS OF USE</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors" href="#">SHIPPING</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</body></html>

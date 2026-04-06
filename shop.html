@@ -1,224 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop | Example Studios</title>
-  <meta
-    name="description"
-    content="Browse Example Studios products in a simple store layout with clear categories."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="styles.css">
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#faf9f7",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container-high": "#e9e8e6",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "surface-container": "#efeeec",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "outline": "#7e7576",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e3e2e0",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary-container": "#626361",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "on-surface-variant": "#4c4546",
+                        "surface": "#faf9f7",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-surface": "#2f3130",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#f2f0ee",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary": "#000000",
+                        "surface-container-low": "#f5f3f1",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5e5e5d",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1b",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9f7",
+                        "surface-dim": "#dbdad8",
+                        "on-background": "#1b1c1b",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-container": "#e0dfdd",
+                        "on-tertiary-container": "#85847f",
+                        "on-secondary-fixed-variant": "#464746",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#1c1c18",
+                        "surface-variant": "#e3e2e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .alpine-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Example Studios home">
-        <span class="brand-mark">E</span>
-        <span class="brand-text">
-          <strong>Example Studios</strong>
-          <small>simple product store</small>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link is-active" href="shop.html">Shop</a>
-        <a class="nav-link" href="about.html">About</a>
-      </nav>
-      <div class="header-actions">
-        <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-drawer">
-          Cart
-          <span class="cart-count" data-cart-count>0</span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <section class="shop-hero panel">
-        <div>
-          <p class="eyebrow">Shop Example Studios</p>
-          <h1>Simple products in a clear store layout.</h1>
-          <p>
-            A basic catalog with neutral product names, simple categories, and easy filtering.
-          </p>
-        </div>
-        <div class="shop-controls">
-          <div class="filter-row" aria-label="Product categories">
-            <button class="filter-chip is-selected" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-chip" type="button" data-filter="featured" aria-pressed="false">Featured</button>
-            <button class="filter-chip" type="button" data-filter="standard" aria-pressed="false">Standard</button>
-            <button class="filter-chip" type="button" data-filter="everyday" aria-pressed="false">Everyday</button>
-          </div>
-          <div class="sort-row">
-            <label class="sort-label" for="shop-sort">Sort by</label>
-            <select id="shop-sort" class="sort-select" data-sort-select>
-              <option value="featured">Featured</option>
-              <option value="price-asc">Price: low to high</option>
-              <option value="price-desc">Price: high to low</option>
-              <option value="newest">Newest arrivals</option>
-              <option value="best-selling">Best selling</option>
-              <option value="name-asc">A to Z</option>
-              <option value="name-desc">Z to A</option>
-            </select>
-          </div>
-        </div>
-        <p class="filter-status" data-filter-status>Showing all 6 products</p>
-      </section>
-
-      <section class="shop-grid">
-        <article class="product-card panel is-clickable" data-product-id="product-one" data-category="featured" tabindex="0" role="link" aria-label="View details for Product One">
-          <div class="product-visual product-one"></div>
-          <div class="product-copy">
-            <span class="product-tag">featured</span>
-            <h2>Product One</h2>
-            <p>A simple featured item with clean details and a custom option.</p>
-            <div class="product-meta">
-              <strong>From Rs 1,400</strong>
-              <span>available</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-one">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-one">Add to cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card panel is-clickable" data-product-id="product-two" data-category="standard" tabindex="0" role="link" aria-label="View details for Product Two">
-          <div class="product-visual product-two"></div>
-          <div class="product-copy">
-            <span class="product-tag">standard</span>
-            <h2>Product Two</h2>
-            <p>A compact item with a straightforward design and simple presentation.</p>
-            <div class="product-meta">
-              <strong>Rs 650</strong>
-              <span>available</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-two">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-two">Add to cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card panel is-clickable" data-product-id="product-three" data-category="featured" tabindex="0" role="link" aria-label="View details for Product Three">
-          <div class="product-visual product-three"></div>
-          <div class="product-copy">
-            <span class="product-tag">popular</span>
-            <h2>Product Three</h2>
-            <p>A flexible product choice with a clear layout and neutral wording.</p>
-            <div class="product-meta">
-              <strong>From Rs 950</strong>
-              <span>available</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-three">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-three">Add to cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card panel is-clickable" data-product-id="product-four" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Four">
-          <div class="product-visual product-four"></div>
-          <div class="product-copy">
-            <span class="product-tag">new</span>
-            <h2>Product Four</h2>
-            <p>A simple item for everyday browsing with easy-to-scan details.</p>
-            <div class="product-meta">
-              <strong>Rs 720</strong>
-              <span>available</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-four">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-four">Add to cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card panel is-clickable" data-product-id="product-five" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Five">
-          <div class="product-visual product-five"></div>
-          <div class="product-copy">
-            <span class="product-tag">classic</span>
-            <h2>Product Five</h2>
-            <p>A balanced product option with a clean structure and simple description.</p>
-            <div class="product-meta">
-              <strong>From Rs 800</strong>
-              <span>available</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-five">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-five">Add to cart</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card panel is-clickable" data-product-id="product-six" data-category="everyday" tabindex="0" role="link" aria-label="View details for Product Six">
-          <div class="product-visual product-six"></div>
-          <div class="product-copy">
-            <span class="product-tag">new</span>
-            <h2>Product Six</h2>
-            <p>A clean product listing prepared for a future release.</p>
-            <div class="product-meta">
-              <strong>Rs 1,050</strong>
-              <span>coming soon</span>
-            </div>
-            <div class="product-actions">
-              <a class="button button-secondary" href="product.html?id=product-six">View details</a>
-              <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-six">Add to cart</button>
-            </div>
-          </div>
-        </article>
-      </section>
-      <p class="shop-empty-state" data-filter-empty hidden>No products in this collection yet.</p>
-    </main>
-
-    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
-      <div class="cart-drawer-header">
-        <div>
-          <p class="eyebrow">Your cart</p>
-          <h2>Picked for later</h2>
-        </div>
-        <button class="cart-close" type="button" aria-label="Close cart">Close</button>
-      </div>
-      <div class="cart-items" data-cart-items></div>
-      <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
-      <div class="cart-summary">
-        <div class="cart-total">
-          <span>Total</span>
-          <strong data-cart-total>Rs 0</strong>
-        </div>
-        <button class="button button-primary cart-checkout" type="button">Checkout later</button>
-      </div>
-    </aside>
-    <div class="cart-backdrop" hidden></div>
-
-    <footer class="site-footer panel">
-      <div>
-        <strong>Example Studios</strong>
-      </div>
-      <div class="socials" aria-label="Social media links">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2zm10.35 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"/></svg>
-        </a>
-        <a href="#" aria-label="Pinterest">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.01 2C6.76 2 3 5.76 3 10.72c0 3.18 1.79 5.95 4.67 7.03.03-.55.01-1.22.15-1.82.16-.65 1.06-4.48 1.06-4.48s-.26-.52-.26-1.28c0-1.2.69-2.1 1.56-2.1.73 0 1.09.55 1.09 1.21 0 .74-.47 1.85-.72 2.88-.21.87.44 1.57 1.31 1.57 1.57 0 2.63-2.02 2.63-4.42 0-1.82-1.22-3.18-3.45-3.18-2.51 0-4.07 1.87-4.07 3.99 0 .73.22 1.26.56 1.66.16.19.18.26.12.47l-.18.73c-.06.23-.25.31-.46.22-1.27-.52-1.86-1.92-1.86-3.5 0-2.61 2.19-5.74 6.55-5.74 3.5 0 5.81 2.53 5.81 5.25 0 3.59-2 6.26-4.95 6.26-.99 0-1.92-.53-2.24-1.12l-.61 2.38c-.22.84-.65 1.88-.96 2.52.72.22 1.48.33 2.26.33 5.24 0 9-3.76 9-8.72C21 5.76 17.24 2 12.01 2z"/></svg>
-        </a>
-        <a href="#" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.56 2H19a5.52 5.52 0 0 0 3 4.68v2.48a7.87 7.87 0 0 1-3.07-.63v7.15a6.52 6.52 0 1 1-6.52-6.52c.25 0 .5.01.74.04v2.56a3.92 3.92 0 1 0 3.41 3.88z"/></svg>
-        </a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f7]/80 dark:bg-[#1b1b1b]/80 backdrop-blur-md flex justify-between items-center px-12 py-6 w-full">
+<a href="index.html" class="text-2xl font-bold tracking-tighter text-black dark:text-white uppercase font-headline">EXAMPLE STUDIOS</a>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10">
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-black dark:text-white border-b border-black dark:border-white pb-1" href="shop.html">COLLECTIONS</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="about.html">EDITORIAL</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="index.html">ARCHIVE</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300" href="index.html">STORES</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-black dark:text-white">shopping_bag</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-black dark:text-white">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Editorial Header Section -->
+<header class="px-12 mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-secondary mb-4 block">Spring / Summer 2024</span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] text-primary">OBJECTS OF <br/>SILENCE</h1>
+</div>
+<div class="md:col-span-5 md:pl-12">
+<p class="font-body text-sm leading-relaxed text-secondary max-w-sm">
+                    A curation of architectural silhouettes and clinical precision. Each piece is an exercise in restraint, crafted from reclaimed minerals and high-density textiles.
+                </p>
+</div>
+</header>
+<!-- Filter Bar -->
+<section class="px-12 mb-12 sticky top-24 z-40 bg-surface/90 backdrop-blur-sm py-4">
+<div class="flex flex-wrap items-center justify-between gap-6 border-b border-outline-variant/30 pb-6">
+<div class="flex gap-12 items-center">
+<div class="group relative">
+<button class="font-label text-[10px] tracking-[0.15em] uppercase flex items-center gap-2 group-hover:text-primary transition-colors">
+                            Collections <span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<div class="group relative">
+<button class="font-label text-[10px] tracking-[0.15em] uppercase flex items-center gap-2 group-hover:text-primary transition-colors">
+                            Material <span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<button class="font-label text-[10px] tracking-[0.15em] uppercase text-secondary/60 hover:text-primary">
+                        Reset Filters
+                    </button>
+</div>
+<div class="font-label text-[10px] tracking-[0.15em] uppercase text-secondary">
+                    Showing 24 Results
+                </div>
+</div>
+</section>
+<!-- Product Grid: Asymmetric & Curated -->
+<div class="px-12 grid grid-cols-1 md:grid-cols-12 gap-y-24 gap-x-8">
+<!-- Featured Large Item -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full aspect-[16/10] object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.02] transition-transform duration-700 ease-out" data-alt="High-fashion editorial shot of a minimalist black coat on a model against a stark, neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl8qzweK0VGi6yYI9IyQlvaopJZ9eCtootf9Ub-iS6o1ndeHaXRUINaz-PXrzWC_pWy6vUcR5XAoh6SjQiG_Lp9ZUzUSV2UPND3cbzKOYrE3gC4l1YgZNjqKRYloNQvscFE9pGQ3w_Agnv9P9sgXwl-nsoG6z2nWJiaxxziW-vQ-U5sGRVi_mVTonMjLz3AEhthr-kXzL3ffSw1Iw482uk2DuECxc6PtICKTLaEa0DVE-4zzivReJRgRvCnIzfC0x9H9ZS0bHNct0"/>
+<div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-1">ST. MORITZ STRUCTURED COAT</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Virgin Wool / Anthracite</p>
+</div>
+<span class="font-body text-sm text-primary">€2.450</span>
+</div>
+</div>
+<!-- Side Small Item -->
+<div class="md:col-span-4 group cursor-pointer md:mt-32">
+<div class="relative overflow-hidden bg-surface-container-high mb-6">
+<img class="w-full aspect-[4/5] object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.05] transition-transform duration-700 ease-out" data-alt="Luxury minimalist black leather handbag shot in clinical high-key lighting with soft ambient shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwg2HU2tUiLnHcF0OOBpn8SO83qzOTfP06UiYU3a02bMDGFKAPFbcRsWS7TqY7A9_Zqt77isTKnvaMd7lUAvZy7GPeHi3GDZhatcgrTUoNrSWxenx_-yTvic7HvidY0izslZ1CmNmMxG3Ud158iAZruw7QGt4RYjIJV4hsihXWOUCWbjH4aaN7gAgoWfObLjQcDi52Edd0Dd320HxCVTe82J-WY7dZQ4pbcIfqgHCJkyhnWZFXV7bV8q6ULox9F0kGQxwKrUvdavw"/>
+</div>
+<div>
+<h3 class="font-headline text-lg text-primary mb-1">ARCHITECTURAL TOTE 01</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Calfskin / Obsidian</p>
+<span class="font-body text-sm text-primary mt-2 block">€1.100</span>
+</div>
+</div>
+<!-- Grid Items -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full aspect-square object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.05] transition-transform duration-700" data-alt="Minimalist sunglasses with thin silver frames placed on a textured stone surface with hard shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1U9MPKWQ6M5nlG-GGEIAfYV0IaC1QnsBzvVkKpbJbeYiNGwv420GXAy4kZl5mZiypLs6KvnsciA5zPNGFLjOMxgE-qcPQvBT05wuUprC2SANI2Hv88ZhASo_A982j4-hTkmFb9QXjHIvRgsRoqX9nfybCDEgtTvoh1rwaaej_jAD_6IKwNi74dQnSSzXrDK70_NF-cZnbTKmCERlNlO2DR5Rm7cqzUdOvzbxdOd1yoUc0CLBBJJJ05D_mWr-CnR5J_zsxFZyqowM"/>
+</div>
+<div>
+<h3 class="font-headline text-lg text-primary mb-1">TITANIUM FRAME 04</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Pure Titanium / Silver</p>
+<span class="font-body text-sm text-primary mt-2 block">€480</span>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer md:translate-y-12">
+<div class="relative overflow-hidden bg-surface-container-highest mb-6">
+<img class="w-full aspect-square object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.05] transition-transform duration-700" data-alt="Close up of a luxury watch with a black leather strap and minimalist white dial on a clinical grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfvhfPfJW0W0ewWr8KDGmPH5Te11KTr6il5GOj1G3v8Fetu_VmqNmezuJWnCL1TazMgZSLBsm6fzorUf4mMeJE5hWyJB0S-mIJfN2flOHyvItTigp8JcCMv4FYfbAnc4097gfNBY_D0WIgykC6RC104EIJdBxQIMTy7C2V8KvOwAvCFQHpEiufBhkbzj5hBLigj20lWcJNa0x3iI22ngLGEJoZvWpNjYNPZa3VozCNM3lo04MtjYTz6G6vVw8i0zaXmEegNPjF0wY"/>
+</div>
+<div>
+<h3 class="font-headline text-lg text-primary mb-1">CHRONO MONOLITH</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Steel / Leather</p>
+<span class="font-body text-sm text-primary mt-2 block">€3.200</span>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full aspect-square object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.05] transition-transform duration-700" data-alt="Avant-garde minimalist footwear in cream leather on a neutral concrete pedestal with soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQiR0QbbMLbpr5VisJXbqIY_mAdbDEwuqkcPGMIfgzN6DYoSg3bfe85V17h09pOdFgbe95FP4p3ruUPzj3SmID4pmtT_oAv8RjYOhBVvQJKuPasapwHDqaNvDmE9ke2ZKM-KUpqM3J5XhaN49OSr0VIaYO3xRK_4sgGefFNoytDl81lF8QCKFStb0zBNq37dzIGSi0eYNyL4pUjSeiis1UH-BA8hRdk1PUfxU9D9PczJLi4fPObSgjUJZkTPIHVH2R8DcEPEwg2oo"/>
+</div>
+<div>
+<h3 class="font-headline text-lg text-primary mb-1">DERBY 02 SLATE</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Full Grain Leather / Bone</p>
+<span class="font-body text-sm text-primary mt-2 block">€890</span>
+</div>
+</div>
+<!-- Bento Styled Break -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+<div class="relative aspect-[16/7] bg-primary overflow-hidden flex items-center px-16">
+<div class="relative z-10">
+<span class="font-label text-[10px] tracking-[0.2em] text-surface mb-2 block uppercase">Limited Edition</span>
+<h2 class="font-headline text-4xl text-surface mb-6">THE CERAMIC <br/>SERIES</h2>
+<button class="bg-surface text-primary font-label text-[10px] tracking-[0.2em] px-8 py-4 uppercase hover:bg-surface-container-high transition-colors">Discover</button>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/2">
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract minimalist ceramic sculpture with organic shapes and soft grain texture in monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJXU8JJcret0F5O08Y6p3rFUaUcsI1IgPrVy2DQK0qCHWTYioJC4-c_Z-mcBnte-BM6nlxsx5XgaapEXS6eSbNHcWa94tH7Zl_G0b7gPdGH-W9elD7i6-iT9UU-9aTeDijv0H8i72LjgJqamMNn-TGgsxcLCoYHuPup5GKDBMBB83NbpMsLILRt3e_yUTHpPA2EwqOXD1U6sBrt8R_M_BgKLDqJ-H5M7xVePq6yN3rcwH1KbEB3c3CA3kshPHH2aBEP-pjZHeqkw"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-6 font-thin">history_edu</span>
+<h3 class="font-headline text-2xl mb-4 italic">"True luxury is the removal of the unnecessary until only the essential remains."</h3>
+<p class="font-label text-[10px] tracking-[0.15em] text-secondary uppercase">— THE MANIFESTO</p>
+</div>
+</div>
+<!-- Final Grid Row -->
+<div class="md:col-span-6 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-high mb-6">
+<img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.02] transition-transform duration-700" data-alt="Folded high-end cashmere sweater in a neutral taupe color on a clean white surface with soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP3nWq-fiXBCZ0V962UckDNZKtjG_uhVIbrzVGRtqUFhZT8Tdu6Tjz5tKbp9n4xpI1TLyV_FmbueRPu8kSk5PR_omBtgJOUChF0iZRKBM5t3aJhb6w1ZLnfHFGXflNjQznm9N42ux1GNWxJbqyu1e5qIcFXJ8xp2V-P4zU27ICmdrc9Ui3F0Xc0-3WooVizoCqqu8Lbu4bkm8rAgBsUQhRYv9D6K4BBjjE-yf1qZ_jMHZYIsi27guaM6NjrqtImlNK2eQBNy-Ic14"/>
+</div>
+<div class="flex justify-between">
+<div>
+<h3 class="font-headline text-xl text-primary mb-1">CASHMERE OVERSIZE KNIT</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Loro Piana Cashmere / Taupe</p>
+</div>
+<span class="font-body text-sm text-primary">€1.400</span>
+</div>
+</div>
+<div class="md:col-span-6 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6">
+<img class="w-full aspect-[4/3] object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.02] transition-transform duration-700" data-alt="Luxury fashion model wearing a clinical white suit walking in a bright minimalist gallery space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFvKmZ0wRZX8gzKQT-szFLGD9YTsxL2z3PWGYRVdsh5x_11KW6XiaNf7-gpvIbn7YxXri5eDJxGaD9iFT0uwlQO6K6SZmDfYn4PERb9pRqJgZngaCOu1TjIIVbhFSiFL5ZLWsqvty8inSOhAvjSypOh6YL7ACa1tXrgYUE9SIVjMKWQC8RApL6LMluvqmhDZ9wwJx7gA7i0zZ-6IjTASrCSxeDvFksf-g_iOoGI3QJyRhMnaohPHUO1nVr1RJM98uuLVUBAwNygVM"/>
+</div>
+<div class="flex justify-between">
+<div>
+<h3 class="font-headline text-xl text-primary mb-1">ALBINO LINEN TROUSER</h3>
+<p class="font-label text-[10px] tracking-[0.1em] text-secondary uppercase">Irish Linen / Chalk</p>
+</div>
+<span class="font-body text-sm text-primary">€620</span>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-32 px-12 flex justify-center items-center gap-12">
+<button class="font-label text-[10px] tracking-[0.2em] text-secondary/40 hover:text-primary transition-colors uppercase">Previous</button>
+<div class="flex gap-6 items-center">
+<span class="font-label text-[12px] text-primary underline underline-offset-8">01</span>
+<span class="font-label text-[12px] text-secondary/40 hover:text-primary transition-colors cursor-pointer">02</span>
+<span class="font-label text-[12px] text-secondary/40 hover:text-primary transition-colors cursor-pointer">03</span>
+</div>
+<button class="font-label text-[10px] tracking-[0.2em] text-primary hover:opacity-70 transition-colors uppercase">Next</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#faf9f7] dark:bg-[#1b1b1b] border-t border-[#cfc4c5]/15 w-full py-16 px-12">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<p class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500">NEWSLETTER</p>
+<div class="flex border-b border-black/10 dark:border-white/10 pb-2 min-w-[300px]">
+<input class="bg-transparent border-none text-[10px] tracking-[0.15em] uppercase w-full focus:ring-0 placeholder:text-neutral-300" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="material-symbols-outlined text-sm">arrow_forward</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="space-y-2">
+<p class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-black dark:text-white font-bold mb-4">LEGAL</p>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors block" href="#">PRIVACY POLICY</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors block" href="#">TERMS OF USE</a>
+</div>
+<div class="space-y-2">
+<p class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-black dark:text-white font-bold mb-4">SUPPORT</p>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors block" href="#">SHIPPING</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors block" href="#">CONTACT</a>
+</div>
+</div>
+</div>
+<div class="mt-16 w-full max-w-screen-2xl mx-auto">
+<p class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 dark:text-neutral-500">© 2024 EXAMPLE STUDIOS. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>

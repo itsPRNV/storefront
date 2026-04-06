@@ -1,220 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Example Studios | Simple Product Store</title>
-  <meta
-    name="description"
-    content="Example Studios is a simple product store with a clean layout and easy browsing."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="styles.css">
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#faf9f7",
+                    "surface-tint": "#5e5e5e",
+                    "surface-container-high": "#e9e8e6",
+                    "on-primary-fixed": "#1b1b1b",
+                    "on-secondary-fixed": "#1b1c1b",
+                    "surface-container": "#efeeec",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#1b1b1b",
+                    "outline-variant": "#cfc4c5",
+                    "on-tertiary-fixed": "#1c1c18",
+                    "outline": "#7e7576",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#e3e2e0",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-secondary-container": "#626361",
+                    "tertiary-fixed-dim": "#c9c6c1",
+                    "on-surface-variant": "#4c4546",
+                    "surface": "#faf9f7",
+                    "on-primary-fixed-variant": "#474747",
+                    "inverse-surface": "#2f3130",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "primary-fixed": "#e2e2e2",
+                    "inverse-on-surface": "#f2f0ee",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#848484",
+                    "surface-container-highest": "#e3e2e0",
+                    "primary": "#000000",
+                    "surface-container-low": "#f5f3f1",
+                    "on-error-container": "#93000a",
+                    "secondary": "#5e5e5e",
+                    "tertiary-fixed": "#e5e2dd",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c1b",
+                    "error-container": "#ffdad6",
+                    "background": "#faf9f7",
+                    "surface-dim": "#dbdad8",
+                    "on-background": "#1b1c1b",
+                    "inverse-primary": "#c6c6c6",
+                    "secondary-container": "#e0dfdd",
+                    "on-tertiary-container": "#85847f",
+                    "on-secondary-fixed-variant": "#464746",
+                    "secondary-fixed-dim": "#c7c6c4",
+                    "tertiary": "#000000",
+                    "tertiary-container": "#1c1c18",
+                    "surface-variant": "#e3e2e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; }
+        .perspective-text { writing-mode: vertical-rl; }
+        .glass-nav {
+            background-color: rgba(250, 249, 247, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-<body>
-  <div class="site-shell">
-    <header class="topbar">
-      <a class="brand" href="index.html" aria-label="Example Studios home">
-        <span class="brand-mark">E</span>
-        <span class="brand-text">
-          <strong>Example Studios</strong>
-          <small>simple product store</small>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
-      <nav id="site-nav" class="nav">
-        <a class="nav-link is-active" href="index.html">Home</a>
-        <a class="nav-link" href="shop.html">Shop</a>
-        <a class="nav-link" href="about.html">About</a>
-      </nav>
-      <div class="header-actions">
-        <button class="cart-button" type="button" aria-expanded="false" aria-controls="cart-drawer">
-          Cart
-          <span class="cart-count" data-cart-count>0</span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero panel">
-        <div class="hero-copy">
-          <p class="eyebrow">Simple layout. Clear shopping.</p>
-          <h1>
-            Simple, clear
-            <span class="headline-pop">product pages</span>
-            for everyday browsing.
-          </h1>
-          <p class="hero-text">
-            Example Studios presents products with basic copy, a clean structure, and a simple
-            shopping flow.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="shop.html">Browse the shop</a>
-            <a class="button button-secondary" href="about.html">About the store</a>
-          </div>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-card art-photo">
-            <div class="photo-overlay">
-              <span class="scribble-star"></span>
-              <p>Simple items, clear details, easy browsing.</p>
-            </div>
-          </div>
-          <div class="art-card art-note">
-            <span class="doodle-badge">new</span>
-            <h2>Featured items</h2>
-            <ul>
-              <li>featured products</li>
-              <li>standard items</li>
-              <li>new arrivals</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-grid">
-        <article class="panel feature feature-wide">
-          <p class="eyebrow">Store layout</p>
-          <h2>Simple product presentation with a clear structure.</h2>
-          <p>
-            The layout keeps the focus on products, pricing, and actions so the storefront feels
-            easy to understand at a glance.
-          </p>
-        </article>
-
-        <article class="panel feature">
-          <div class="price-pill">Rs 600 - Rs 1,500</div>
-          <h3>Basic catalog</h3>
-          <p>Clear product entries with simple pricing and short descriptions.</p>
-        </article>
-
-        <article class="panel feature">
-          <div class="quote-bubble">built to stay simple and easy to scan</div>
-          <h3>Plain presentation</h3>
-          <p>Everything is written in a neutral, straightforward way without niche branding.</p>
-        </article>
-      </section>
-
-      <section class="catalog-preview">
-        <div class="section-heading">
-          <p class="eyebrow">Shop preview</p>
-          <h2>Simple products with clear details.</h2>
-        </div>
-
-        <div class="product-grid">
-          <article class="product-card panel is-clickable" data-product-id="product-one" tabindex="0" role="link" aria-label="View details for Product One">
-            <div class="product-visual product-one"></div>
-            <div class="product-copy">
-              <span class="product-tag">featured</span>
-              <h3>Product One</h3>
-              <p>A simple featured item with clean details and a custom option.</p>
-              <div class="product-meta">
-                <strong>From Rs 1,400</strong>
-                <span>available</span>
-              </div>
-              <div class="product-actions">
-                <a class="button button-secondary" href="product.html?id=product-one">View details</a>
-                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-one">Add to cart</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card panel is-clickable" data-product-id="product-two" tabindex="0" role="link" aria-label="View details for Product Two">
-            <div class="product-visual product-two"></div>
-            <div class="product-copy">
-              <span class="product-tag">standard</span>
-              <h3>Product Two</h3>
-              <p>A compact item with a straightforward design and simple presentation.</p>
-              <div class="product-meta">
-                <strong>Rs 650</strong>
-                <span>available</span>
-              </div>
-              <div class="product-actions">
-                <a class="button button-secondary" href="product.html?id=product-two">View details</a>
-                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-two">Add to cart</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card panel is-clickable" data-product-id="product-three" tabindex="0" role="link" aria-label="View details for Product Three">
-            <div class="product-visual product-three"></div>
-            <div class="product-copy">
-              <span class="product-tag">popular</span>
-              <h3>Product Three</h3>
-              <p>A flexible product choice with a clear layout and neutral wording.</p>
-              <div class="product-meta">
-                <strong>From Rs 950</strong>
-                <span>available</span>
-              </div>
-              <div class="product-actions">
-                <a class="button button-secondary" href="product.html?id=product-three">View details</a>
-                <button class="button button-primary add-to-cart-button" type="button" data-add-to-cart="product-three">Add to cart</button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel about-teaser">
-        <div>
-          <p class="eyebrow">About the store</p>
-          <h2>Built to be clear, simple, and easy to present.</h2>
-        </div>
-        <p>
-          Example Studios is presented as a general store with neutral copy, simple product labels,
-          and a straightforward layout.
-        </p>
-        <a class="button button-secondary" href="about.html">Read the story</a>
-      </section>
-    </main>
-
-    <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
-      <div class="cart-drawer-header">
-        <div>
-          <p class="eyebrow">Your cart</p>
-          <h2>Picked for later</h2>
-        </div>
-        <button class="cart-close" type="button" aria-label="Close cart">Close</button>
-      </div>
-      <div class="cart-items" data-cart-items></div>
-      <div class="cart-empty" data-cart-empty>Your cart is empty.</div>
-      <div class="cart-summary">
-        <div class="cart-total">
-          <span>Total</span>
-          <strong data-cart-total>Rs 0</strong>
-        </div>
-        <button class="button button-primary cart-checkout" type="button">Checkout later</button>
-      </div>
-    </aside>
-    <div class="cart-backdrop" hidden></div>
-
-    <footer class="site-footer panel">
-      <div>
-        <strong>Example Studios</strong>
-      </div>
-      <div class="socials" aria-label="Social media links">
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2zm10.35 1.7a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"/></svg>
-        </a>
-        <a href="#" aria-label="Pinterest">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.01 2C6.76 2 3 5.76 3 10.72c0 3.18 1.79 5.95 4.67 7.03.03-.55.01-1.22.15-1.82.16-.65 1.06-4.48 1.06-4.48s-.26-.52-.26-1.28c0-1.2.69-2.1 1.56-2.1.73 0 1.09.55 1.09 1.21 0 .74-.47 1.85-.72 2.88-.21.87.44 1.57 1.31 1.57 1.57 0 2.63-2.02 2.63-4.42 0-1.82-1.22-3.18-3.45-3.18-2.51 0-4.07 1.87-4.07 3.99 0 .73.22 1.26.56 1.66.16.19.18.26.12.47l-.18.73c-.06.23-.25.31-.46.22-1.27-.52-1.86-1.92-1.86-3.5 0-2.61 2.19-5.74 6.55-5.74 3.5 0 5.81 2.53 5.81 5.25 0 3.59-2 6.26-4.95 6.26-.99 0-1.92-.53-2.24-1.12l-.61 2.38c-.22.84-.65 1.88-.96 2.52.72.22 1.48.33 2.26.33 5.24 0 9-3.76 9-8.72C21 5.76 17.24 2 12.01 2z"/></svg>
-        </a>
-        <a href="#" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.56 2H19a5.52 5.52 0 0 0 3 4.68v2.48a7.87 7.87 0 0 1-3.07-.63v7.15a6.52 6.52 0 1 1-6.52-6.52c.25 0 .5.01.74.04v2.56a3.92 3.92 0 1 0 3.41 3.88z"/></svg>
-        </a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="products.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f7]/80 backdrop-blur-md flex justify-between items-center px-6 md:px-12 py-6 w-full">
+<a href="index.html" class="text-2xl font-bold tracking-tighter text-black dark:text-white uppercase font-['Noto_Serif']">EXAMPLE STUDIOS</a>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-8">
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-black border-b border-black pb-1" href="shop.html">COLLECTIONS</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 hover:text-black transition-colors duration-300" href="about.html">EDITORIAL</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 hover:text-black transition-colors duration-300" href="index.html">ARCHIVE</a>
+<a class="font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase text-neutral-500 hover:text-black transition-colors duration-300" href="index.html">STORES</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:block relative">
+<span class="material-symbols-outlined text-xl absolute left-0 top-1/2 -translate-y-1/2">search</span>
+<input class="bg-transparent border-b border-outline-variant/30 pl-8 py-1 font-label text-[10px] tracking-widest focus:outline-none focus:border-black transition-colors uppercase" placeholder="SEARCH" type="text"/>
+</div>
+<a href="cart.html" class="hover:opacity-70 transition-opacity"><span class="material-symbols-outlined">shopping_bag</span></a>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 md:pt-32">
+<!-- Atmos Hero Section -->
+<section class="relative h-[921px] w-full px-6 md:px-12 mb-32 overflow-hidden">
+<div class="relative h-full w-full bg-surface-container-highest group">
+<img alt="" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a minimalist concrete villa in the snowy Swiss Alps, soft dawn light, stark shadows, high fashion mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxfPQulXrTEu5Qdyzt84i-42nla7bBMb-jqhc5PzCi7Y-wuLqt6kR2QYfWLW_rAhc54ZQ99xcHpn2ExBupHLDUT4X4qKicZ8pP_f4_6aUjVYS15ZM5Furu1wGsDEwdgdlGpTo55l5G_5Wqkn667t_hrH6q6Q0wOwrtl5o-RuTdztWR-xLRuKzhHbkfBOZsAfFPTpdolUezTrNNi9YCFLKtuJdaBeujsaCjPM_6lDTSIQ_wrhwJ9fMX10k_LWqxmqw7ntv9-VxvBes"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-16 left-12 md:left-24 max-w-2xl text-white">
+<span class="font-label text-xs tracking-[0.3em] uppercase block mb-4 opacity-80">Winter Expedition MMXXIV</span>
+<h1 class="font-headline text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-8">ALPINE<br/>PRECISION</h1>
+<div class="flex items-center gap-8">
+<button class="bg-white text-black px-12 py-4 font-label text-xs font-bold tracking-[0.2em] uppercase hover:bg-surface-container-high transition-colors scale-102 transition-transform duration-200">
+                            EXPLORE THE DROP
+                        </button>
+<a class="font-label text-xs tracking-[0.2em] uppercase border-b border-white/40 pb-1 hover:border-white transition-all" href="#">FILM PREMIERE</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Grid: Products -->
+<section class="px-6 md:px-12 mb-48">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl md:text-5xl tracking-tight mb-4 text-on-surface">THE CLINICAL SUITE</h2>
+<p class="font-body text-secondary text-sm leading-relaxed tracking-wide">A study in architectural silhouettes and technical wools. Developed for the high-altitude environment, refined for the metropolitan grid.</p>
+</div>
+<div class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">Showing 01 — 04 of 12</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-4">
+<!-- Product 1: Large Asymmetric -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low mb-6 overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-fashion model wearing a structured black oversized blazer against a stark white studio background, clinical minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgrUfyEQoJeTkksU8a4GKvnQ1elDFkH9gNzqWxulhybT1RjVO_cB-7toG0EPRxiDJcwIK1sWMZ7yPZtwMQoK_EXXwEFnCCUVWEeICuZ5LILvr61OqECd3ehzEvMsTLvhZtleQmbgGXMynL_K9sd9qgnLn--b3fYG_DzJ5WWaGGPACbIPPlO8_JwXDxln8_SCidTMpwFzppl56AK2tauFcD5pdrLLxGb7Ssp6ypUlZ2Trj1Ag9fr9QYnn1bAteCizQU2gp-LCZwSWs"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label text-xs font-bold tracking-widest uppercase">STRUCTURAL BLAZER V.1</h3>
+<p class="font-body text-[11px] text-secondary tracking-widest mt-1">SARTORIAL TECH-WOOL</p>
+</div>
+<span class="font-label text-xs tracking-widest">$2,450</span>
+</div>
+</div>
+<!-- Product 2: Small Offset -->
+<div class="md:col-span-4 md:col-start-9 md:pt-32 group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low mb-6 overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up detail of a luxury leather handbag with geometric silver hardware on a slab of grey marble." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTGKF9mxNuM389v36sldKLdyGvzDdES6QJJv0tWChv48wOdfgIXsNiGU_nCw4ec7rPBXGq7w637tJHe__YBke2QrFkdaonhoEIe87xQfow7RZ39x2wfdGkXI9G87SIqRdiq1lpVyWxbPqWKn0c4FDiZjTuVyCwneXOdXKqHG9jRZZBSGYTc8JLmpgvlL9uUwx6ANPNAvo1KJ_n31sUgRfCORmybG-bR0jxEp8ZXNX1JfRBhci27BZWussgklTPVIyHl14hftVoMLM"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label text-xs font-bold tracking-widest uppercase">RECTILINEAR CARRY</h3>
+<p class="font-body text-[11px] text-secondary tracking-widest mt-1">BRUSHED CALFSKIN</p>
+</div>
+<span class="font-label text-xs tracking-widest">$1,890</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Philosophy: St. Moritz Vibe -->
+<section class="bg-surface-container-low py-32 mb-48 relative overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-24 grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative z-10">
+<span class="font-label text-[10px] tracking-[0.4em] uppercase text-secondary mb-8 block">THE ETHOS</span>
+<h2 class="font-headline text-5xl md:text-7xl tracking-tighter mb-12 leading-[0.9]">BEYOND THE<br/><span class="italic">VISIBLE</span></h2>
+<div class="space-y-8 max-w-md">
+<p class="font-body text-sm leading-8 text-on-surface-variant">Our design philosophy is anchored in "The Alpine Gallery"—an aesthetic intersection where clinical precision meets the quiet luxury of the Engadin Valley. We prioritize the luxury of breathing room over the noise of saturation.</p>
+<p class="font-body text-sm leading-8 text-on-surface-variant">Each piece is a physical layer, like stacked sheets of heavy-weight paper, designed to withstand the elements while maintaining a razor-sharp silhouette.</p>
+</div>
+<div class="mt-16">
+<button class="group flex items-center gap-4 py-4 px-0 hover:gap-8 transition-all">
+<span class="font-label text-xs font-bold tracking-[0.2em] uppercase">VIEW THE MANIFESTO</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative aspect-[3/4] md:translate-x-12">
+<img alt="" class="w-full h-full object-cover" data-alt="Abstract shot of mountain peaks through frosted glass, soft tonal shades of grey and white, luxury editorial texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDA3T234M2cYmeb_jDWpoJDT4qRPj-ZJMeV1DqCbx7CJmWN0TvxcaXphhGWQuo7hvIIPL0gruCUCUWIr1OCD79S2326fo9NH5g7kbksxEz96QVLE2dl0OWHJem23jJEi62wWAhAFg1Q2mhsZP3UM3IwT_llzA-znahAYgm6iEzF_3s9WfZHzIrJrlmUzSI4ONTDCvZAJ98dEriMogY4thtwQ3K6aGBl9pdfGyr4pCX478BOdjVf3b-oPyiv7950JuRDJ7_k843ldk"/>
+<div class="absolute -bottom-8 -left-8 bg-surface p-8 hidden md:block">
+<p class="font-headline italic text-2xl text-primary">"Silence is the ultimate expression of luxury."</p>
+</div>
+</div>
+</div>
+<!-- Background Grain/Texture Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD22Jy9P-q96yiUPaPh-aMH9ComuTQFvag0FmMgccu71E0dUw85M1R3Id15GW55r8G4JN3_SSmvlslDLRANeQScz-4mLpUXYk0Arh8o9g5uatahBBjmC-EHU_EpJToHWcbmByKm_EKpLeXKUEIFeMz9aWo2bviaEABLoB9P_MPK1xE5nISv3kpXjg6qGL1xde8axDSfh3Kp86WFbU25E0A_iuZzQlluIoULjzqJhat2au1zoDomULfZ4QWyai2Z4GOjkjNRUKuPcL4')"></div>
+</section>
+<!-- Bento Collection Preview -->
+<section class="px-6 md:px-12 mb-48">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[1000px] md:h-[700px]">
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-surface-container-highest">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Full body shot of model in technical winter gear standing on a minimalist concrete balcony overlooking snowy peaks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd4srS4et2ndoz9vd_XKrbTpNS-tAisCsA0BKM53-rYJN7Zy4gKmusCflhtI4lsVeha3wx-E5URkf_Q7RFwYbXTNwYNhUWO6CGhu1Fa49OajMy9apTtYKOTBk8mBrwwc_X21zGH0JRxahUiTANXQWQZtwxirYnNsOeWoYrQ-zGZb-xlq3p8mFocM-tc8Ovg49GQxCyK_ewSLIJ3ttjvWca1veiZZvRDfID59L0yEiDg1hT6ivpjigZI_BARPxtXK5OZzQdKmiyJH4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="font-label text-[10px] tracking-[0.2em] mb-2 uppercase">CATEGORY</p>
+<h4 class="font-headline text-3xl tracking-tight">OUTERWEAR LABORATORY</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-surface-container-high">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Minimalist layout of eyewear on a polished steel surface with cold studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCySOSUPIlpdaUpbFV5J2SKY2ShZyf8V5lBSQHYduCvtxwG9q4HLkFzxd1sxeqzwG6pEOGWkzHOSH4P3Ogk2sZNPpOtmqZszy930rdNJtKJhKkVGxgZ5f5Q1ycPt7paafjKJ_E0Fe96DdpQ5U5rNkBkMludTWoeFv7sx_TtfKaPoUiKZfXI_p04uiktMDYCjo8v0T7avS13sKaTLV88HWu673cpPkepyX1GC1R6ZoF6P1TWiKlEg-dKknIEhhZySOWhhgHBiuxYKzA"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h4 class="font-label text-[10px] tracking-[0.2em] uppercase">OPTICAL SERIES</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-2 relative group overflow-hidden bg-surface-container-highest">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Model's back showing the intricate tailoring of a grey wool coat, soft directional light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPntd-YdZpMaYpoRGpOaBhkJGOSsyDN1iqndRwvryK456fkxAvURM8a5KVElTmMYGj4BgK1eRpQHwX1UqhS7IaZONkjKX7cTvzKhXJODga8yLwoR31tl1b4jOyQOipteGWBbYVgaLmoqCiOtow1a5xbFpFrs3ed80Wa2gDjNQKiLQqj1ZLuuCLsf_C5tj-PNLg86887lF3jXdkhbnTQXIcdvTNxrOTtB4OavNJHo4yORUfZNz39im2XqY0smSGzDmC8oVFTDDExZY"/>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<h4 class="font-label text-[10px] tracking-[0.2em] uppercase">TAILORING ARCHIVE</h4>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden bg-surface-container-low">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Elegant leather gloves placed on a stack of high-end art books." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPTyc7jzZL_zbxCVBvQDbrGH_ltASTeQ6UZE6EyFf8eB0rU0ubOfNUoHbLodKmMxp2qFptWix8OVyl1LcHZtrdWd0pNqu7CEySGXrSYs0jMoLZsSns-PR0HyDghQhAnWLWYlCoIls6lzzwbdaorePA6mLEYalLcBEVsfhzUHo9trn2t4mrmpe5yErSObTlAk2VUWvHy65Nnn3ICCgyFudcZ7AN_9GUZ7H9lLfHLbuLRTUwJ-g68ftTqRX7bdavFbaiIgfqhuEPc7k"/>
+<div class="absolute bottom-6 left-6 text-on-surface">
+<h4 class="font-label text-[10px] tracking-[0.2em] uppercase">ACCESSORIES</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Clinical Newsletter -->
+<section class="max-w-screen-xl mx-auto px-6 md:px-12 mb-48 text-center">
+<div class="inline-block h-20 w-[1px] bg-outline-variant/30 mb-12"></div>
+<h2 class="font-headline text-4xl md:text-5xl tracking-tighter mb-8 uppercase italic">JOURNAL ACCESS</h2>
+<p class="font-body text-secondary text-sm max-w-md mx-auto mb-12 leading-relaxed uppercase tracking-widest">Receive curated dispatches on clinical design and high-altitude living.</p>
+<form class="max-w-lg mx-auto flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-transparent border-b border-outline-variant/50 py-4 font-label text-[11px] tracking-[0.2em] focus:outline-none focus:border-black transition-colors uppercase px-2" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-primary text-white px-12 py-4 font-label text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-primary-container transition-all" type="submit">
+                    SUBSCRIBE
+                </button>
+</form>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#faf9f7] dark:bg-[#1b1b1b] w-full py-16 px-6 md:px-12 border-t border-[#cfc4c5]/15">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-8 md:w-1/3">
+<span class="text-xl font-bold tracking-tighter uppercase font-['Noto_Serif']">EXAMPLE STUDIOS</span>
+<p class="font-['Inter'] text-[11px] tracking-widest text-neutral-500 leading-relaxed max-w-xs">
+                    ARCHITECTURAL GARMENTS FOR THE DISCERNING INDIVIDUAL. DESIGNED IN ST. MORITZ, MANUFACTURED IN ITALY.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-16 md:gap-24">
+<div class="flex flex-col gap-4">
+<span class="font-['Inter'] text-[10px] font-bold tracking-[0.2em] text-black">INFORMATION</span>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">TERMS OF USE</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">SHIPPING</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">CONTACT</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Inter'] text-[10px] font-bold tracking-[0.2em] text-black">SOCIAL</span>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">INSTAGRAM</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">VIMEO</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">LINKEDIN</a>
+</div>
+</div>
+</div>
+<div class="mt-24 pt-8 border-t border-[#cfc4c5]/15 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400">© 2024 EXAMPLE STUDIOS. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-8">
+<span class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400">CREDITS</span>
+<span class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 italic">ALPINE PRECISION</span>
+</div>
+</div>
+</footer>
+</body></html>

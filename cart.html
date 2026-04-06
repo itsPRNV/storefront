@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#faf9f7",
+                        "surface-tint": "#5e5e5e",
+                        "surface-container-high": "#e9e8e6",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-secondary-fixed": "#1b1c1b",
+                        "surface-container": "#efeeec",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "outline": "#7e7576",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#e3e2e0",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-secondary-container": "#626361",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "on-surface-variant": "#4c4546",
+                        "surface": "#faf9f7",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-surface": "#2f3130",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "primary-fixed": "#e2e2e2",
+                        "inverse-on-surface": "#f2f0ee",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary": "#000000",
+                        "surface-container-low": "#f5f3f1",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5e5e5d",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1b1c1b",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9f7",
+                        "surface-dim": "#dbdad8",
+                        "on-background": "#1b1c1b",
+                        "inverse-primary": "#c6c6c6",
+                        "secondary-container": "#e0dfdd",
+                        "on-tertiary-container": "#85847f",
+                        "on-secondary-fixed-variant": "#464746",
+                        "secondary-fixed-dim": "#c7c6c4",
+                        "tertiary": "#000000",
+                        "tertiary-container": "#1c1c18",
+                        "surface-variant": "#e3e2e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf9f7;
+        }
+        .serif-display {
+            font-family: 'Noto Serif', serif;
+        }
+        /* Alpine Gallery Glassmorphism */
+        .glass-nav {
+            background: rgba(250, 249, 247, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-6 md:px-12 py-6 w-full">
+<a href="index.html" class="text-2xl font-bold tracking-tighter text-black uppercase serif-display">
+                EXAMPLE STUDIOS
+            </a>
+<div class="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center space-x-10 font-['Noto_Serif'] text-sm tracking-[0.1em] uppercase">
+<a class="text-neutral-500 hover:text-black transition-colors duration-300" href="shop.html">COLLECTIONS</a>
+<a class="text-neutral-500 hover:text-black transition-colors duration-300" href="about.html">EDITORIAL</a>
+<a class="text-neutral-500 hover:text-black transition-colors duration-300" href="index.html">ARCHIVE</a>
+<a class="text-neutral-500 hover:text-black transition-colors duration-300" href="index.html">STORES</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-black" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+<div class="bg-[#cfc4c5]/15 h-[1px] w-full block"></div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-screen-2xl mx-auto min-h-screen">
+<!-- Header Section -->
+<header class="mb-16">
+<span class="font-['Inter'] text-[10px] tracking-[0.2em] uppercase text-neutral-400 mb-4 block">YOUR SELECTION</span>
+<h1 class="serif-display text-5xl md:text-7xl font-light tracking-tight text-primary">Shopping Bag</h1>
+</header>
+<div class="flex flex-col lg:flex-row gap-20">
+<!-- Cart Items Grid (Asymmetric Layout) -->
+<div class="flex-grow space-y-24">
+<!-- Cart Item 1 -->
+<div class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="w-full md:w-72 aspect-[3/4] bg-surface-container overflow-hidden">
+<img alt="Luxury minimalist coat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="studio shot of a high-end beige wool coat hanging against a clean off-white background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABzOa75ExKBY2ez7Uj5FBnRS2RtLP2giKK4QPvxelb0QUu0CJkVOVcqcfGkkh-9fa9gu5qw2I-SXqE7mX2n1KArMK5Wl4TtS0Cfwod9TWZp8SprWaC5MEEvZ9XPckoR4Y-BJd5CGit7V_A4hX0EJMYMnclKXC7vrFRu04KdZEEle8FCdJJUyTaD2eu7qqlZc29Pzoz1A-zD4XrOOCQLAhEEB1aJh8GLCoLQxH6MgXGAJpG2fV84qNyqU47THtKjwKmNruQ1XHnoKk"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-2">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="serif-display text-2xl mb-1">Sculpted Wool Overcoat</h3>
+<p class="text-[10px] tracking-widest text-neutral-400 uppercase">Archive Series / 01</p>
+</div>
+<span class="serif-display text-xl">$1,250</span>
+</div>
+<div class="space-y-2 text-sm text-neutral-500 font-light">
+<p>Size: 48 (IT)</p>
+<p>Color: Sand Stone</p>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-8">
+<div class="flex items-center border-b border-outline-variant/30 pb-1">
+<span class="text-[10px] tracking-widest uppercase text-neutral-400 mr-4">Qty</span>
+<span class="text-sm">1</span>
+</div>
+<button class="text-[10px] tracking-widest uppercase border-b border-transparent hover:border-black transition-all">Remove</button>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex flex-col md:flex-row-reverse gap-8 items-start group">
+<div class="w-full md:w-72 aspect-[3/4] bg-surface-container overflow-hidden">
+<img alt="Minimalist leather footwear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close up of premium black leather sneakers on a stone pedestal architectural editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfou8VuqksKZgjC-a2wLIn_u1oXGwfwNunMtD2i-EWNKIkFen2DhMuyGtLFjw9zZ7EwLIxhFWKTrg2nzvrHfcQxgwgC3AkpT-PCmCVJSZBRelabZNXop4XUy_a8nSZwFZy5YDHc3N6NIfDFZ6aOAyXxTh7tFuuXN6fNTWL8ojTZe3NOo0qg3uuXWMxr8NIT__lVQDupB-RgO_gvZb9pN1n73QP_7ciaAm9a2o4PVfs9K-Vdy-BfjcGlF454rGdpxsQf5ALdTUkqeE"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-full py-2 md:text-right">
+<div class="space-y-4">
+<div class="flex md:flex-row-reverse justify-between items-start">
+<div>
+<h3 class="serif-display text-2xl mb-1">Vellum Leather Sneaker</h3>
+<p class="text-[10px] tracking-widest text-neutral-400 uppercase">Collection 04 / Core</p>
+</div>
+<span class="serif-display text-xl">$480</span>
+</div>
+<div class="space-y-2 text-sm text-neutral-500 font-light">
+<p>Size: 42 (EU)</p>
+<p>Color: Obsidian</p>
+</div>
+</div>
+<div class="mt-8 flex items-center md:justify-end gap-8">
+<button class="text-[10px] tracking-widest uppercase border-b border-transparent hover:border-black transition-all">Remove</button>
+<div class="flex items-center border-b border-outline-variant/30 pb-1">
+<span class="text-[10px] tracking-widest uppercase text-neutral-400 mr-4">Qty</span>
+<span class="text-sm">1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Sidebar -->
+<aside class="w-full lg:w-[400px] shrink-0">
+<div class="bg-surface-container-low p-10 space-y-12 sticky top-32">
+<div>
+<h2 class="serif-display text-3xl mb-8">Order Summary</h2>
+<div class="space-y-6 text-sm">
+<div class="flex justify-between items-center text-neutral-500">
+<span class="tracking-wide">Subtotal</span>
+<span>$1,730.00</span>
+</div>
+<div class="flex justify-between items-center text-neutral-500">
+<span class="tracking-wide">Shipping</span>
+<span class="text-[10px] tracking-widest uppercase">Calculated at next step</span>
+</div>
+<div class="flex justify-between items-center text-neutral-500">
+<span class="tracking-wide">Tax</span>
+<span>$0.00</span>
+</div>
+<div class="pt-6 bg-[#cfc4c5]/15 h-[1px] w-full block"></div>
+<div class="flex justify-between items-center text-xl serif-display">
+<span>Total</span>
+<span>$1,730.00</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary text-on-primary py-6 font-bold tracking-[0.2em] text-[12px] uppercase transition-all duration-300 hover:bg-primary-container hover:scale-[1.02]">
+                            Proceed to Checkout
+                        </button>
+<p class="text-[10px] text-center text-neutral-400 tracking-widest uppercase">Complimentary Shipping on all orders</p>
+</div>
+<!-- Payment Partners - Silent Luxury aesthetic -->
+<div class="pt-12 flex justify-between opacity-30 grayscale items-center">
+<span class="material-symbols-outlined text-3xl">credit_card</span>
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+<span class="material-symbols-outlined text-3xl">contactless</span>
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+</div>
+</aside>
+</div>
+<!-- Suggestion Section - Horizontal Scroll style -->
+<section class="mt-40">
+<div class="flex justify-between items-end mb-12">
+<h4 class="serif-display text-3xl">Complete the Look</h4>
+<a class="text-[10px] tracking-widest uppercase border-b border-black pb-1" href="#">View Collection</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-4">
+<div class="aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img alt="Luxury accessory" class="w-full h-full object-cover" data-alt="editorial shot of high-end perfume bottle on a mirrored surface with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7lENLhpnbfweemz9D1mbNSdTP67E5he0IYtHMkFPYZYgpnt_ycCxzTs836h16x7CtxoUht58zIY_2hEJ7yNozMqiZnqvxWcwKb1ZJ0BZbrsIIjdyy5tLUj7bjIUHnBk9jxDD4vlhjQ8Nohg9SAavFKdstBjqng3Y-DP5IE8bKiD8MrG_FgAUFZEqZ0jACjSBCgsjPgcdh_khCAUhdPy-pZYQBgI5lZXVn7DZwyPQudXtR6AMS5Kl4Q2AX7QmHV0PFR2FBcO46I7w"/>
+</div>
+<div class="text-[11px] tracking-widest uppercase space-y-1">
+<p class="font-bold">Aura Fragrance</p>
+<p class="text-neutral-400">$180</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img alt="Minimalist trousers" class="w-full h-full object-cover" data-alt="folded grey linen trousers on a white marble floor soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiJUr92APe8RpiVXdS20IKLu6LWdhwJH0Tuyg0uvGv6WPzYmAXyR6UwJST58juQVsE75t87m_KNDLi1MN2yRB3CkuG7BES9yzlzE_DlbVHNzuG3h4ysc--00bC13wL674C7bnY3LNnrZGV6Uqw84zCjC4ttOGCnmsHk-7KaVwJJ4cG0dgm-7WwLkvV9okZ3jakAZob98GhnnWtlRg7IoUUiy07hBQp1M2DVk-46iTD_l9TxScg5PB-l6KnvedVMcn-bMbdBRWf0GE"/>
+</div>
+<div class="text-[11px] tracking-widest uppercase space-y-1">
+<p class="font-bold">Linen Trousers</p>
+<p class="text-neutral-400">$340</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img alt="Designer eyewear" class="w-full h-full object-cover" data-alt="black acetate sunglasses on a clean architectural concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsmm8hmw-QKjSRUDtPwnryiR8fjM7lZrl7My3e5kwodXmpYiZwbOP9yws1V8ojkLk1TCym1MjaM1ayR51S-86iiKSfik3UM0I5Y30aOOJtlIk_03oqJhJAQ_fV1vuCDJ90_XkwqXjEhSQX78eL0xMnyGOK5AJVop4-IDJkMiyPoAoIPwJPVci6KHqeyB_0KTuKEoE7LPbz3JPc94ic8uDgzIRUt_SF-ABnLT75KUSDplT31Yuv3MT9M3KS-jkqX-rtejP5RaNoIbY"/>
+</div>
+<div class="text-[11px] tracking-widest uppercase space-y-1">
+<p class="font-bold">Series 02 Frame</p>
+<p class="text-neutral-400">$295</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-[3/4] bg-surface-container-highest overflow-hidden">
+<img alt="Minimalist belt" class="w-full h-full object-cover" data-alt="detail shot of a high quality black leather belt with silver buckle on neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9QNOQU02SmEcIewhur2joCUs-Gwpkj2ajkneWAWy3l60_RRByGJhpAk0iaH8zN2T8u7ejOtoCADm8nf3yUoAxVp-hjnOl9kksPlcLcqeABa3rFa9edc6wCxdjkfxqnd0MlW2iMfJ2HrL5_jO58rA23eIKske7AigqNpOk3KRKcEDPe609usdJHexKmuf4AwspJowrjSfnheiD8irSlzatMYFSt4XP-pd9O-nD4VfLDAn5xJoJHWrmCOVMQ7ek76aFMQ42w55AQU0"/>
+</div>
+<div class="text-[11px] tracking-widest uppercase space-y-1">
+<p class="font-bold">Slim Calf Belt</p>
+<p class="text-neutral-400">$210</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#faf9f7] w-full py-16 px-6 md:px-12 border-t border-[#cfc4c5]/15">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-black font-bold">EXAMPLE STUDIOS</div>
+<div class="flex flex-col space-y-2">
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">TERMS OF USE</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">SHIPPING</a>
+<a class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400 hover:text-black transition-colors" href="#">CONTACT</a>
+</div>
+</div>
+<div class="font-['Inter'] text-[10px] tracking-[0.15em] uppercase text-neutral-400">
+                © 2024 EXAMPLE STUDIOS. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>
